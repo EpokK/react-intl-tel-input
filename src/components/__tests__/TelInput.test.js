@@ -356,7 +356,9 @@ describe('TelInput', function() {
       const subject = this.makeSubject()
       const flagDropdownComponent = subject.find(FlagDropDown)
 
-      expect(flagDropdownComponent.props().dropdownContainer).toBe('body')
+      expect(flagDropdownComponent.props().dropdownContainer).toBeInstanceOf(
+        HTMLElement
+      )
     })
 
     it('sets FlagDropDown "isMobile" prop to true', () => {
@@ -376,7 +378,7 @@ describe('TelInput', function() {
       const subject = this.makeSubject()
       const flagDropdownComponent = subject.find(FlagDropDown)
 
-      expect(flagDropdownComponent.props().dropdownContainer).toBe('')
+      expect(flagDropdownComponent.props().dropdownContainer).toBe(null)
     })
   })
 

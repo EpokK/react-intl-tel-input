@@ -7,7 +7,7 @@ import RootModal from './RootModal'
 export default class FlagDropDown extends Component {
   static propTypes = {
     allowDropdown: PropTypes.bool,
-    dropdownContainer: PropTypes.string,
+    dropdownContainer: PropTypes.instanceOf(Element),
     separateDialCode: PropTypes.bool,
     dialCode: PropTypes.string,
     countryCode: PropTypes.string,
